@@ -1,0 +1,18 @@
+default-stages: [pre-commit, pre-push]
+default-language_version :
+  python : python3.11
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.3.0
+    hooks:
+    - id: check-yaml
+    - id: end-of-file-fixer
+    - id: trailing-whitespace
+  - repo : local
+    hooks:
+      - id : generate-requirements-file
+        name : generate-requirements-file
+        language : system
+        entry: make requirements
+        pass_filenames : false
+        always_run : true
