@@ -1,0 +1,14 @@
+[project]
+name = "producerApp"
+version ="1.0.0"
+readme= "README.md"
+requires-python =  "~=3.11.0"
+dependencies = [
+    "pyspark ==3.5.6",
+    "pyyaml >=6.0.2"
+]
+
+
+[tool.ruff]
+line-length = 180
+exclude = ["temp/*"]
